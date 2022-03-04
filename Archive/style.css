@@ -1,0 +1,27 @@
+body{
+    background-color:aqua;
+}
+canvas{
+    margin-left:20%;
+}
+button{
+    background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+.t{
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+}
+.tools ul li {
+    list-style:none;
+    padding: 12px;
+}
+.butt{
+    background-color: #555555;
+}

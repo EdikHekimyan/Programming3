@@ -53,7 +53,7 @@ grassArr = []
 grassEaterArr = []
 predatorArr = []
 
-
+weath = "winter";
 Grass = require("./Grass")
 GrassEater = require("./GrassEater")
 Predator = require("./Predator")
@@ -95,10 +95,10 @@ function game() {
     }
     io.sockets.emit("send matrix", matrix);
 }
-setInterval(game, 100)
-io.on('connection', function () {
-    createObject(matrix)
-})
+setInterval(game, 400)
+
+
+
 function kill() {
     grassArr = [];
     grassEaterArr = []
@@ -110,6 +110,7 @@ function kill() {
     }
     io.sockets.emit("send matrix", matrix);
 }
+
 
 
 function addGrass() {
@@ -124,6 +125,7 @@ function addGrass() {
     }
     io.sockets.emit("send matrix", matrix);
 }
+
 function addGrassEater() {
     for (var i = 0; i < 7; i++) {   
     var x = Math.floor(Math.random() * matrix[0].length)
@@ -135,6 +137,7 @@ function addGrassEater() {
     }
     io.sockets.emit("send matrix", matrix);
 }
+
 function addPredator() {
     for (var i = 0; i < 7; i++) {   
         var x = Math.floor(Math.random() * matrix[0].length)
@@ -146,6 +149,23 @@ function addPredator() {
         }
         io.sockets.emit("send matrix", matrix);
 }
+function weather() {
+    if (weath == "winter") {
+        weath = "spring"
+    }
+    else if (weath == "spring") {
+        weath = "summer"
+    }
+    else if (weath == "summer") {
+        weath = "autumn"
+    }
+    else if (weath == "autumn") {
+        weath = "winter"
+    }
+    io.sockets.emit('weather', weath)
+}
+setInterval(weather, 5000);
+
 io.on('connection', function (socket) {
     createObject();
     socket.on("kill", kill);
