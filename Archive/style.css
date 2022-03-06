@@ -22,6 +22,9 @@ button{
     list-style:none;
     padding: 12px;
 }
-.butt{
-    background-color: #555555;
+.button1{
+    background-color: #ff0000;
+}
+.button2{
+    background-color: #00ff00;
 }

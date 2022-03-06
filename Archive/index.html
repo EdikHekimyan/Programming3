@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,13 +8,14 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap" rel="stylesheet">
     <script src="socket.io/socket.io.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.14/p5.js"></script>
     <script src="script.js"></script>
-   
+
 </head>
+
 <body>
     <div class="t">
 
@@ -21,23 +23,28 @@
         <h2>By Edik Hekimyan</h2>
 
     </div>
- 
+
     <div class="tools">
         <h1 style="color:yellowgreen">Events</h1>
-        <ul>
-            <li>
-                <button onclick="kill()" class="butt">Kill them all</button>
-            </li>
-            <li>
-                <button onclick="addGrass()" class="butt">Add grass</button>
-            </li>
-            <li>
-                <button onclick="addGrassEater()" class="butt">Add grass eater</button>
-            </li>
-            <li>
-                <button onclick="addPredator()" class="butt">Add predator</button>
-            </li>
-        </ul>
-    </div>
+            <ul>
+                <li>
+                    <button onclick="killAll()" class="button1">Kill them all</button>
+                    <button onclick="addAll()" class="button2">Add them all</button>
+                </li>
+                <li>
+                    <button onclick="killGrass()" class="button1">Kill grass</button>
+                    <button onclick="addGrass()" class="button2">Add grass</button>
+                </li>
+                <li>
+                    <button onclick="killGrassEater()" class="button1">Kill grass eater</button>
+                    <button onclick="addGrassEater()" class="button2">Add grass eater</button>
+                </li>
+                <li>
+                    <button onclick="killPredator()" class="button1">Kill predator</button>
+                    <button onclick="addPredator()" class="button2">Add predator</button>
+                </li>
+            </ul>
+        </div>
 </body>
+
 </html>

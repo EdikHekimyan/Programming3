@@ -52,8 +52,20 @@ function nkarel(matrix) {
 
 socket.on('send matrix', nkarel)
 
-function kill() {
-    socket.emit("kill")
+function killAll() {
+    socket.emit("kill all")
+}
+function killGrass() {
+    socket.emit("kill grass")
+}
+function killGrassEater() {
+    socket.emit("kill grass eater")
+}
+function killPredator() {
+    socket.emit("kill predator")
+}
+function addAll() {
+    socket.emit("add all")
 }
 function addGrass() {
     socket.emit("add grass")
